@@ -1,6 +1,5 @@
 using Assets.ScriptsSdk.Extensions;
 using emt_sdk.Settings;
-using Sirenix.OdinInspector;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +8,6 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class TransformCameraComponent : MonoBehaviour
 {
-    [SceneObjectsOnly, Required]
     public Camera Camera;
     
     public List<DisplaySetting> Settings;
@@ -40,12 +38,10 @@ public class TransformCameraComponent : MonoBehaviour
     public DisplaySetting Setting => Settings[SettingIndex];
 
     [SerializeField]
-    [OnValueChanged("ApplyEditorFields")]
     [Range(0, 7)]
     private int _settingIndex = 0;
 
     [SerializeField]
-    [OnValueChanged("ApplyEditorFields")]
     [Range(0, 7)]
     private int _targetDisplay;
 

@@ -1,14 +1,11 @@
 using Assets.ScriptsSdk.Extensions;
-using Sirenix.OdinInspector;
 using System;
 using UnityEngine;
 
 public class CornerMoveComponent : MonoBehaviour
 {
-    [Required, SceneObjectsOnly]
     public TransformCameraComponent Camera;
 
-    [Required, SceneObjectsOnly]
     public RectTransform Crosshair;
 
     public int ActiveVertex;

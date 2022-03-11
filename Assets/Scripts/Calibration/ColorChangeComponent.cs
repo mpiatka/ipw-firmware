@@ -1,4 +1,3 @@
-using Sirenix.OdinInspector;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,10 +13,8 @@ public class ColorChangeComponent : MonoBehaviour
 
     // TODO: Testing moving shape during calibration
 
-    [Required, SceneObjectsOnly]
     public TransformCameraComponent Camera;
 
-    [LabelText("Active mode")]
     public ColorChangeModeEnum ColorChangeMode;
 
     public readonly Dictionary<ColorChangeModeEnum, float> DefaultValues = new Dictionary<ColorChangeModeEnum, float>

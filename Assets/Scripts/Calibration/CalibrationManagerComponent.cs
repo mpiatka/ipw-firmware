@@ -6,8 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using emt_sdk.Generated.ScenePackage;
 using emt_sdk.ScenePackage;
-using Sirenix.OdinInspector;
-using Sirenix.Serialization;
+using Sirenix.OdinSerializer;
 using UnityEngine;
 using UnityEngine.Rendering;
 

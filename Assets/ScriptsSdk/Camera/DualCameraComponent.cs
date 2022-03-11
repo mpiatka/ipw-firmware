@@ -4,20 +4,15 @@ using System;
 using System.IO;
 using System.Collections;
 using UnityEngine;
-using Sirenix.OdinInspector;
 
 public class DualCameraComponent : MonoBehaviour
 {
-    [SceneObjectsOnly, Required, BoxGroup("Rendering")]
     public TransformCameraComponent TopCamera;
-    [SceneObjectsOnly, Required, BoxGroup("Rendering")]
     public TransformCameraComponent BottomCamera;
-    [OnValueChanged("OrientationChanged"), BoxGroup("Rendering")]
     public IPWSetting.IPWOrientation Orientation;
 
     public IPWSetting Setting;
 
-    [OnValueChanged("CurveChanged"), LabelText("Brightness curve on"), BoxGroup("Debug")]
     public bool CurveOn = true;
 
     // TODO: Fix ortho sizing, lens shift is just physical worldspace shift scaled by orthosize
@@ -53,7 +48,6 @@ public class DualCameraComponent : MonoBehaviour
         ApplySettings();
     }
 
-    [Button, BoxGroup("Settings")]
     public void LoadSettings()
     {
         Setting = ProjectorTransfomartionSettingsLoader.LoadSettings();
@@ -92,7 +86,6 @@ public class DualCameraComponent : MonoBehaviour
         }
     }
 
-    [Button, BoxGroup("Settings")]
     public void ApplySettings()
     {
         switch (Setting.Orientation)
@@ -125,7 +118,6 @@ public class DualCameraComponent : MonoBehaviour
         BottomCamera.ApplySettings();
     }
 
-    [Button, BoxGroup("Settings")]
     public void SaveSettings()
     {
         var userFolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
@@ -143,13 +135,11 @@ public class DualCameraComponent : MonoBehaviour
         Debug.Log("Configuration saved");
     }
 
-    [Button, LabelText("Swap Settings"), BoxGroup("Rendering")]
     public void SwapSettings()
     {
         (TopCamera.SettingIndex, BottomCamera.SettingIndex) = (BottomCamera.SettingIndex, TopCamera.SettingIndex);
     }
 
-    [Button, LabelText("Swap Displays"), BoxGroup("Rendering")]
     public void SwapDisplays()
     {
         var firstDisplay = TopCamera.TargetDisplay;

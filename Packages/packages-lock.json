@@ -1,11 +1,10 @@
 {
   "dependencies": {
     "com.unity.collab-proxy": {
-      "version": "1.15.7",
+      "version": "1.15.12",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.nuget.newtonsoft-json": "2.0.0",
         "com.unity.services.core": "1.0.1"
       },
       "url": "https://packages.unity.com"
@@ -50,8 +49,8 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.nuget.newtonsoft-json": {
-      "version": "2.0.0",
-      "depth": 1,
+      "version": "3.0.1",
+      "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -146,7 +145,7 @@
       }
     },
     "cz.naki3d.emt-sdk": {
-      "version": "file:/home/ipw/Documents/emt-sdk.tgz",
+      "version": "file:/home/mapi/git/emt-sdk/emt-sdk/bin/Debug/netstandard2.0/UnityPackage/emt-sdk.tgz",
       "depth": 0,
       "source": "local-tarball",
       "dependencies": {}
