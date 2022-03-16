@@ -24,6 +24,7 @@ public class VideoDisplayComponent : MonoBehaviour
     {
         var viewport = Camera.GetBoundaries(5);
         var videoAspect = VideoPlayer.width / (float)VideoPlayer.height;
+        var viewportAspect = viewport.width / (float)viewport.height;
         
         // 10m is the default unity plane size, why it's not 1 is beyond me...
         const float planeSize = 10f;
@@ -35,7 +36,7 @@ public class VideoDisplayComponent : MonoBehaviour
                 transform.localScale = new Vector3(viewport.width / planeSize, 1, viewport.height / planeSize);
                 break;
             case VideoScene.VideoAspectRatioEnum.FitInside:
-                if (videoAspect > 2) // Wider 
+                if (videoAspect > viewportAspect) // Wider 
                 {
                     transform.localScale = new Vector3(viewport.width / planeSize, 1, (viewport.width / videoAspect) / planeSize);
                 }
