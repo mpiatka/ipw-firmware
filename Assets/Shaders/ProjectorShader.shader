@@ -123,16 +123,6 @@ Shader "Unlit/NewUnlitShader"
                 // Perspective correct UV mapping
                 fixed2 uv = i.uv / i.uv2;
                 
-                // Stretch sides of texture due to projector angle
-                if (flipCurve < 0.5) {
-                    uv.x = 3.0 * uv.x - pow(uv.x, _Power2);
-                    uv.x /= 2.0;
-                }
-                else {
-                    uv.x = uv.x + pow(uv.x, _Power);
-                    uv.x /= 2.0;
-                }
-
                 // Compensate for uneven projector brightness on edges
                 float bc = 0;
                 if (enableCurve > 0.1) bc = brightnessCurve(uv);
