@@ -81,6 +81,8 @@ public class DualCameraComponent : MonoBehaviour
             case IPWSetting.IPWOrientation.Horizontal:
                 size = new Vector2(topBoundary.xMax - bottomBoundary.x, bottomBoundary.height);
                 return new Rect(bottomBoundary.x, bottomBoundary.y, size.x, size.y);
+            case IPWSetting.IPWOrientation.Single:
+                return new Rect(topBoundary.x, topBoundary.y, topBoundary.width, topBoundary.height);
             default:
                 throw new NotSupportedException();
         }
