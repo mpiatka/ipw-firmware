@@ -120,14 +120,14 @@ Shader "Unlit/NewUnlitShader"
             {
                 fixed2 uv = i.uv / i.uv2;
 
-                if (flipCurve < 0.5) {
-                    uv.x = 3.0 * uv.x - pow(uv.x, _Power2);
-                    uv.x /= 2.0;
-                }
-                else {
-                    uv.x = uv.x + pow(uv.x, _Power);
-                    uv.x /= 2.0;
-                }
+//                if (flipCurve < 0.5) {
+//                    uv.x = 3.0 * uv.x - pow(uv.x, _Power2);
+//                    uv.x /= 2.0;
+//                }
+//                else {
+//                    uv.x = uv.x + pow(uv.x, _Power);
+//                    uv.x /= 2.0;
+//                }
 
                 fixed4 col = tex.Sample(trilinear_clamp_sampler, uv);
 
