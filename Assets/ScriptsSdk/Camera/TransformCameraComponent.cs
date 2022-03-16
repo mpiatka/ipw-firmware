@@ -55,7 +55,10 @@ public class TransformCameraComponent : MonoBehaviour
         var bottomLeft = Camera.ViewportToWorldPoint(new Vector3(0, 0, distance));
         var topRight = Camera.ViewportToWorldPoint(new Vector3(1, 1, distance));
 
-        return new Rect(bottomLeft.x, bottomLeft.y, topRight.x - bottomLeft.x, topRight.y - bottomLeft.y);
+        var width = topRight.x - bottomLeft.x;
+        var height = topRight.y - bottomLeft.y;
+
+        return new Rect(bottomLeft.x, bottomLeft.y, width, height);
     }
 
     public void SetTransform(Vector2[] vertices)
@@ -78,7 +81,7 @@ public class TransformCameraComponent : MonoBehaviour
     {
         _targetDisplay = Setting.DisplayId;
         Camera.targetDisplay = Setting.DisplayId;
-        Camera.aspect = 1;
+        //Camera.aspect = 1;
         
         ProjectorTransformationPass.ScreenData[TargetDisplay].ScreenMesh = MeshUtils.CreateTransform(SettingsVertices);
 
