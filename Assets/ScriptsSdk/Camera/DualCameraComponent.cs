@@ -26,7 +26,7 @@ public class DualCameraComponent : MonoBehaviour, ICameraRig
         for (int i = 1; i < Display.displays.Length; i++)
         {
             if (Display.displays[i].active) continue;
-            Display.displays[i].Activate();
+            //Display.displays[i].Activate();
             Display.displays[i].SetRenderingResolution(2048, 2048);
         }
 
