@@ -48,8 +48,11 @@ public class ExhibitConnectionComponent : MonoBehaviour
             case "video":
                 SceneManager.LoadScene("VideoScene");
                 break;
+            case "pano":
+                SceneManager.LoadScene("PanoScene");
+                break;
             default:
-                throw new NotImplementedException();
+                throw new NotImplementedException(ActivePackage.Parameters.DisplayType);
         }
     }
 
