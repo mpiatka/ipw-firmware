@@ -80,7 +80,6 @@ public class TransformCameraComponent : MonoBehaviour
     {
         _targetDisplay = Setting.DisplayId;
         Camera.targetDisplay = Setting.DisplayId;
-        Camera.aspect = 1;
         
         ProjectorTransformationPass.ScreenData[TargetDisplay].ScreenMesh = MeshUtils.CreateTransform(SettingsVertices, AlignCorners);
 
