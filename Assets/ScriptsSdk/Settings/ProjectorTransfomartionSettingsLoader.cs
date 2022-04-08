@@ -35,6 +35,7 @@ public static class ProjectorTransfomartionSettingsLoader
             Logger.ErrorUnity("Failed to load settings", e);
             return new IPWSetting
             {
+				Orientation = IPWSetting.IPWOrientation.Single,
                 Displays = new List<DisplaySetting>
                 {
                     new DisplaySetting(),
