@@ -16,7 +16,7 @@ public class ProjectorTransformationPass : ScriptableRenderPass
     public static float[] Contrast = new float[MAX_DISPLAYS];
     public static bool[] FlipCurve = new bool[MAX_DISPLAYS];
     public static float[] CrossOver = new float[MAX_DISPLAYS];
-    public static bool EnableCurve = true;
+    public static bool EnableCurve = false;
     public static bool Vertical = true;
 
     public static bool PhysicalAlignment = false;
