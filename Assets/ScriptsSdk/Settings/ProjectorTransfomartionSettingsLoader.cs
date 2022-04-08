@@ -32,6 +32,7 @@ public static class ProjectorTransfomartionSettingsLoader
             Debug.Log(e);
             return new IPWSetting
             {
+				Orientation = IPWSetting.IPWOrientation.Single,
                 Displays = new List<DisplaySetting>
                 {
                     new DisplaySetting(),
