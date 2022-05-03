@@ -24,11 +24,11 @@ public class ProjectorTransformationPass : ScriptableRenderPass
     // SW calibration settings
     public static bool SoftwareCalibration = false;
     public static bool EnableColorRamp = false;
-    public static bool EnableGeometricCorrection = true;
+    public static bool EnableGeometricCorrection = false;
     public static bool EnableGammaCorrection = false;
-    public static bool EnableBrightnessCorrection = true;
-    public static bool EnableContrastSaturation = true;
-    public static bool EnableBlending = true;
+    public static bool EnableBrightnessCorrection = false;
+    public static bool EnableContrastSaturation = false;
+    public static bool EnableBlending = false;
 
     public ProjectorTransformationPass(string profilerTag, RenderPassEvent renderPassEvent, Material materialToBlit, Material materialPhysicalAlignment, Material materialSoftwareCalibration)
     {
